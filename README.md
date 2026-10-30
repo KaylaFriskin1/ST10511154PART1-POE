@@ -7,21 +7,8 @@ Location: Gqeberha, South Africa
 
 ---
 
-## TABLE OF CONTENTS
-1. Executive Summary
-2. Comprehensive Project Requirements and Vision
-3. System Architecture and Directory Layout
-4. Core Features and Technical Implementation
-5. User Interface (UI) and User Experience (UX) Design
-6. Search Engine Optimization (SEO) and Accessibility Compliance
-7. Quality Assurance and Testing Framework
-8. Installation, Deployment, and Local Setup
-9. Comprehensive Changelog and Project History
-10. Project Summary and Academic Assessment Metrics
 
----
-
-## 1. EXECUTIVE SUMMARY
+## 1.SUMMARY
 
 Crumb Studio Bakery is an interactive, fully responsive multi-page web platform engineered for a boutique bakery located in Gqeberha, South Africa. Designed to satisfy all technical and structural guidelines of the WEDES020 Web Development module, this project delivers an engaging, accessible, and feature-rich digital storefront.
 
@@ -44,51 +31,9 @@ The application allows users to seamlessly navigate between specialized sections
 
 ---
 
-## 3. SYSTEM ARCHITECTURE AND DIRECTORY LAYOUT
 
-The file structure follows a standardized, modular organization separating root index entry points, core CSS assets, visual media files, and sub-page views.
 
-crumb-studio-bakery/
-│
-├── index.html                  # Main Home Page featuring Hero Search and Brand Overview
-├── README.md                   # Comprehensive Project Technical Documentation
-│
-├── Assets/
-│   ├── style.css               # Core Stylesheet (Variables, Grid, Modals, 3D Transforms)
-│   └── images/                 # Optimized Visual Assets
-│       ├── logo1.jpg           # Site Favicon Media
-│       ├── picture1.jpg        # Hero Banner Display Graphic
-│       ├── 2.jpg               # Macaron Cookie
-│       ├── 3.jpg               # Pig Cookies
-│       ├── 4.jpg               # M&M Cookies
-│       ├── 5.jpg               # Hershey Cookies
-│       ├── 6.jpg               # Lemon Surprise Cookie
-│       ├── 7.jpg               # Biscoff Cookie
-│       ├── 8.jpg               # Heart Cookies
-│       ├── 9.jpg               # Pistachio Chip Cookie
-│       ├── 10.jpg              # Cream Full Cookie
-│       ├── 11.jpg              # Mint Choc Cookie
-│       ├── 12.jpg              # Cute Flower Cookie
-│       ├── 13.jpg              # Fun Cookies
-│       ├── 14.jpg              # Fat Cookies
-│       ├── 15.jpg              # Ice Cream Cookie
-│       ├── 16.jpg              # Choc Chip Ice-Cream Cookie
-│       ├── 17.jpg              # Oreo Surprise Cookie
-│       ├── 18.jpg              # Oats Cookie
-│       ├── 19.jpg              # Jam Full Cookie
-│       ├── 20.jpg              # Pistachio White Cookie
-│       └── 21.jpg              # Red Cookies
-│
-└── Pages/
-    ├── about.html              # Brand Story, History, and Artisan Values Page
-    ├── contact.html            # General Feedback Form and Embedded Google Map
-    ├── enquiry.html            # Event Catering and Custom Bulk Order Form
-    ├── Gallery.html            # 20-Item Product Gallery with Live Search and Lightbox
-    └── team.html               # Interactive 3D Flip-Card Team Presentation
-
----
-
-## 4. CORE FEATURES AND TECHNICAL IMPLEMENTATION
+## 3. CORE FEATURES AND TECHNICAL IMPLEMENTATION
 
 ### Universal Smart Search Engine
 - Hero-Integrated Search Box: Positioned centrally on the main home page (index.html), allowing users to input full or partial terms.
@@ -135,7 +80,7 @@ crumb-studio-bakery/
 
 ---
 
-## 5. USER INTERFACE (UI) AND USER EXPERIENCE (UX) DESIGN
+## 4. USER INTERFACE (UI) AND USER EXPERIENCE (UX) DESIGN
 
 ### Typography and Palette
 - Primary Color: Deep Cocoa Brown (#4a2c11) for headers, borders, and main brand elements.
@@ -149,7 +94,7 @@ crumb-studio-bakery/
 
 ---
 
-## 6. SEARCH ENGINE OPTIMIZATION (SEO) AND ACCESSIBILITY COMPLIANCE
+## 5. SEARCH ENGINE OPTIMIZATION (SEO) AND ACCESSIBILITY COMPLIANCE
 
 - Meta Descriptions: Every HTML document features a custom <meta name="description" content="..."> tag summarizing page purpose.
 - Alt Text Coverage: All <img> elements include meaningful alternative text attributes to support screen readers and enhance search indexation.
@@ -157,7 +102,7 @@ crumb-studio-bakery/
 
 ---
 
-## 7. QUALITY ASSURANCE AND TESTING FRAMEWORK
+## 6. QUALITY ASSURANCE AND TESTING FRAMEWORK
 
 - Browser Verification: Tested on Google Chrome, Microsoft Edge, Mozilla Firefox, and Apple Safari.
 - Viewport Testing: Validated across desktop monitors (1920x1080), laptop screens (1366x768), tablet interfaces (768x1024), and mobile viewports (375x667 and 414x896).
@@ -165,7 +110,7 @@ crumb-studio-bakery/
 
 ---
 
-## 8. INSTALLATION, DEPLOYMENT, AND LOCAL SETUP
+## 7. INSTALLATION, DEPLOYMENT, AND LOCAL SETUP
 
 ### Prerequisites
 - Any modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari).
@@ -183,7 +128,7 @@ crumb-studio-bakery/
 
 ---
 
-## 9. COMPREHENSIVE CHANGELOG AND PROJECT HISTORY
+## 8. COMPREHENSIVE CHANGELOG AND PROJECT HISTORY
 
 - Version 1.0.0 (Initial Framework): Created multi-page file structure, linking base stylesheets and primary page skeletons.
 - Version 1.1.0 (Header & Navigation Overhaul): Replaced static image logo with brand title text and added CSS checkbox hamburger drawer for mobile viewports.
@@ -197,12 +142,12 @@ crumb-studio-bakery/
 ## 10. PROJECT SUMMARY AND ACADEMIC ASSESSMENT METRICS
 
 Evaluation Metric | Implementation Detail | Status
----|---|---
-Multi-Page Layout | 6 complete HTML5 pages (index, about, contact, enquiry, Gallery, team) | Complete
-Responsive Design | Custom CSS Grid and Flexbox models supporting desktop, tablet, and mobile | Complete
-Product Portfolio | 20 individual cookie items with exact custom titles, prices, and high-res imagery | Complete
-Interactive Modals | Full-screen image lightbox modal, quantity calculation modal, and store-pickup receipt confirmation modal | Complete
-Smart Search | Cross-page search bar with auto-suggestion dropdowns and automatic parameter routing | Complete
-Forms & Maps | Validated contact and enquiry forms paired with embedded location map | Complete
-SEO & Accessibility | Unique meta descriptions, semantic HTML5 structure, and full image alt text coverage | Complete
-Documentation | Extensive, fully detailed README.md repository document | Complete
+
+Multi-Page Layout : 6 complete HTML5 pages (index, about, contact, enquiry, Gallery, team)
+Responsive Design : Custom CSS Grid and Flexbox models supporting desktop, tablet, and mobile 
+Product Portfolio : 20 individual cookie items with exact custom titles, prices, and high-res imagery 
+Interactive Modals : Full-screen image lightbox modal, quantity calculation modal, and store-pickup receipt confirmation modal 
+Smart Search : Cross-page search bar with auto-suggestion dropdowns and automatic parameter routing 
+Forms & Maps : Validated contact and enquiry forms paired with embedded location map 
+SEO & Accessibility : Unique meta descriptions, semantic HTML5 structure, and full image alt text coverage
+Documentation : Extensive, fully detailed README.md repository document 
