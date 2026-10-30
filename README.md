@@ -151,3 +151,52 @@ Evaluation Metric - Implementation Detail - Status
 - Forms & Maps : Validated contact and enquiry forms paired with embedded location map 
 - SEO & Accessibility : Unique meta descriptions, semantic HTML5 structure, and full image alt text coverage
 - Documentation : Extensive, fully detailed README.md repository document 
+# GRAPHICAL USER INTERFACE (GUI) DOCUMENTATION
+
+## 1. NAVIGATION & HEADER LAYOUT
+- Brand Title: Positioned prominently at the top left/center of every page as clean text ("CRUMB STUDIO") in deep cocoa brown, avoiding graphic clutter.
+- Desktop Navigation Bar: Horizontal link list connecting all main views (HOME PAGE, OUR STORY, CONTACT, ENQUIRY, GALLERY, OUR TEAM) separated by clean vertical dividers.
+- Mobile Drawer Menu: On screens smaller than 820px, the navigation bar converts into a 3-line hamburger icon. Tapping the icon smoothly slides open a vertical drawer menu.
+
+---
+
+## 2. HERO SECTION & SMART SEARCH BAR
+- Greeting & Banner: Features a welcoming intro ("Hello there...") alongside a high-resolution hero display image showcasing stacked artisanal cookies.
+- Centered Search Bar: Placed directly beneath the introductory copy with a prominent gold search button ("Search Gallery").
+- Live Auto-Suggestions Dropdown: Typing into the input opens a floating dropdown listing matching site pages (Contact Us, Our Team, Enquiry) and cookie names (Macaron, Biscoff, Pig cookies). Clicking any item routes the user directly to that page or filters the gallery instantly.
+
+---
+
+## 3. PRODUCT GALLERY GRID (2-COLUMN LAYOUT)
+- Balanced Grid Layout: Arranges all 20 cookie items across a spacious 2-column grid.
+- Image Cards & Zoom Badges: Each card features a high-quality product photo with a semi-transparent "Click to zoom" badge overlay that highlights on hover.
+- Price & Title Display: Displays the exact cookie name and price in South African Rands (e.g., "R 35.00").
+- Call-to-Action Buttons: Includes a styled "Add to Cart" button on every card to launch the ordering workflow.
+
+---
+
+## 4. OVERLAY MODALS (INTERACTIVE POPUPS)
+- Quantity Selection Modal (Step 1): Tapping "Add to Cart" brings up a centered popup window displaying the item title, a numeric quantity selector input, and a live auto-calculating total price.
+- Receipt & Confirmation Modal (Step 2): Clicking "Next" transitions to a confirmation popup displaying the required store pickup message:
+  "Your order has been submitted. Go to the nearest store and please show them your message and pay in front of the counter. Thank you for supporting our business."
+- Email Handoff: Clicking "Proceed to Open Gmail" opens the user's email client with pre-formatted order details and receipt instructions.
+- Image Lightbox Modal: Clicking any cookie image darkens the background and displays the photo in high resolution, equipped with previous (<) and next (>) navigation arrows and descriptive captions.
+
+---
+
+## 5. INTERACTIVE 3D TEAM FLIP CARDS
+- Two-Sided Profile Cards: Presents bakery staff and leadership on the "Our Team" page.
+- 3D Flip Animation: Hovering or tapping a card triggers a smooth 180-degree card flip animation.
+- High-Contrast Backing: The back of each card uses a dark bakery-brown background with crisp white typography to ensure descriptions are easily readable.
+
+---
+
+## 6. FORMS & INTERACTIVE LOCATION MAP
+- Form Styling: Styled input boxes and textareas with gold focus borders on both the general Feedback page (contact.html) and Catering Enquiry page (enquiry.html).
+- Embedded Google Map: A responsive, framed location map integrated directly onto the contact page showing the bakery's location in Gqeberha.
+
+---
+
+## 7. FOOTER SECTION & QUICK LINKS
+- 3-Block Footer Layout: Features organized columns for Contact Info (Phone/Email), Social Media links (Facebook/Instagram), and a full Quick Links list for instant 1-click navigation to any page.
+-
