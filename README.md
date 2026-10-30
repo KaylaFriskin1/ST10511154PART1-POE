@@ -200,3 +200,30 @@ Evaluation Metric - Implementation Detail - Status
 ## 7. FOOTER SECTION & QUICK LINKS
 - 3-Block Footer Layout: Features organized columns for Contact Info (Phone/Email), Social Media links (Facebook/Instagram), and a full Quick Links list for instant 1-click navigation to any page.
 -
+# REFERENCES & CITATIONS
+
+## Academic & Institutional Context
+- Institution: Rosebank College Nelson Mandela Bay Campus
+- Qualification: Diploma in Information Technology in Software Development
+- Module Name: Web Development (Introduction)
+- Module Code: WEDES020
+- Assessment Type: Portfolio of Evidence (POE) Part 1 & Final Submission
+- Project Title: Crumb Studio Bakery Web Application
+- Location: Gqeberha, Eastern Cape, South Africa
+
+---
+
+## Technical & Documentation References
+
+1. World Wide Web Consortium (W3C). (2023). HTML5 Specification and Semantic Markup Guidelines. W3C Recommendation. Available at: https://www.w3.org/TR/html52/
+
+2. World Wide Web Consortium (W3C). (2023). Cascading Style Sheets (CSS) Level 3 Specification: Grid Layout, Flexbox, and 3D Transforms. W3C Recommendation. Available at: https://www.w3.org/TR/css-grid-1/
+
+3. Mozilla Developer Network (MDN). (2024). JavaScript (ES6+) Standard Reference: Event Handling, DOM Manipulation, and URLSearchParams API. MDN Web Docs. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+4. Web Content Accessibility Guidelines (WCAG). (2023). WCAG 2.1 Standard: Text Contrast, Keyboard Navigation, and Alternative Text (Alt Text) Requirements. Web Accessibility Initiative (WAI). Available at: https://www.w3.org/WAI/standards-guidelines/wcag/
+
+5. Google Maps Platform. (2024). Embed API & Maps Integration Standards. Google Developers Documentation. Available at: https://developers.google.com/maps/documentation/embed
+
+6. Visual Studio Code & Live Server Documentation. (2024). Local Development & Static Web Server Setup Guide. Available at: https://code.visualstudio.com/docs
+7.
