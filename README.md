@@ -141,7 +141,7 @@ The application allows users to seamlessly navigate between specialized sections
 
 ## 10. PROJECT SUMMARY AND ACADEMIC ASSESSMENT METRICS
 
-Evaluation Metric | Implementation Detail | Status
+Evaluation Metric - Implementation Detail - Status
 
 - Multi-Page Layout : 6 complete HTML5 pages (index, about, contact, enquiry, Gallery, team)
 - Responsive Design : Custom CSS Grid and Flexbox models supporting desktop, tablet, and mobile 
