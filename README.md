@@ -143,11 +143,11 @@ The application allows users to seamlessly navigate between specialized sections
 
 Evaluation Metric | Implementation Detail | Status
 
-Multi-Page Layout : 6 complete HTML5 pages (index, about, contact, enquiry, Gallery, team)
-Responsive Design : Custom CSS Grid and Flexbox models supporting desktop, tablet, and mobile 
-Product Portfolio : 20 individual cookie items with exact custom titles, prices, and high-res imagery 
-Interactive Modals : Full-screen image lightbox modal, quantity calculation modal, and store-pickup receipt confirmation modal 
-Smart Search : Cross-page search bar with auto-suggestion dropdowns and automatic parameter routing 
-Forms & Maps : Validated contact and enquiry forms paired with embedded location map 
-SEO & Accessibility : Unique meta descriptions, semantic HTML5 structure, and full image alt text coverage
-Documentation : Extensive, fully detailed README.md repository document 
+- Multi-Page Layout : 6 complete HTML5 pages (index, about, contact, enquiry, Gallery, team)
+- Responsive Design : Custom CSS Grid and Flexbox models supporting desktop, tablet, and mobile 
+- Product Portfolio : 20 individual cookie items with exact custom titles, prices, and high-res imagery 
+- Interactive Modals : Full-screen image lightbox modal, quantity calculation modal, and store-pickup receipt confirmation modal 
+- Smart Search : Cross-page search bar with auto-suggestion dropdowns and automatic parameter routing 
+- Forms & Maps : Validated contact and enquiry forms paired with embedded location map 
+- SEO & Accessibility : Unique meta descriptions, semantic HTML5 structure, and full image alt text coverage
+- Documentation : Extensive, fully detailed README.md repository document 
