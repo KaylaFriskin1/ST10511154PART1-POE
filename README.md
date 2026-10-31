@@ -29,7 +29,7 @@ PART 1 WEBDEVELOPMENT ASSIGNMENT
 
 # Part 2 POE
 
-For part 2, I focused on improving my website by adding css.styles inside my Assets folder, proving my website proposal and editing the readme.Md
+
 ---
 ## Changes
 * Updated the proposal
@@ -87,7 +87,7 @@ Line Height: 1.6
 
 Applied globally to body.home-page for clear line spacing and easy readability.
 
-## Update for an Ice task 4
+## Update Ice task 4
 - Added a form on my contact page
 - Formatted my contact page again using style.css
 ---
