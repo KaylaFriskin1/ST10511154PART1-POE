@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER ENQUIRY | Crumb Studio</title>
+    <link rel="stylesheet" href="../Assets/style.css">
+    <link rel="icon" type="image/jpeg" href="../Assets/images/logo1.jpg">
+</head>
+<body class="home-page">
+    <header class="site-header">
+        <a href="../index.html" class="header-brand-title">CRUMB STUDIO</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="nav-menu">
+            <a href="../index.html" class="nav-link">HOME PAGE</a> |
+            <a href="about.html" class="nav-link">OUR STORY</a> |
+            <a href="contact.html" class="nav-link">CONTACT</a> |
+            <a href="enquiry.html" class="nav-link active">ENQUIRY</a> |
+            <a href="Gallery.html" class="nav-link">GALLERY</a> |
+            <a href="team.html" class="nav-link">OUR TEAM</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <section class="contact-form-section">
+            <h1>Catering & Custom Event Order Enquiry</h1>
+            <p style="margin-bottom: 20px;">Planning a party, corporate event, or bulk cookie order? Fill out your order details below!</p>
+            
+            <form class="enquiry-form" onsubmit="handleEnquirySubmit(event)">
+                <label for="enq-name">Full Name:</label>
+                <input type="text" id="enq-name" required placeholder="Enter your full name">
+
+                <label for="enq-email">Email Address:</label>
+                <input type="email" id="enq-email" required placeholder="Enter your email address">
+
+                <label for="enq-phone">Phone Number:</label>
+                <input type="tel" id="enq-phone" required placeholder="Enter your phone number">
+
+                <label for="event-date">Event / Pickup Date:</label>
+                <input type="date" id="event-date" required>
+
+                <label for="cookie-flavor">Flavor Selection:</label>
+                <select id="cookie-flavor" required>
+                    <option value="Mixed Assortment Box">Mixed Assortment Box</option>
+                    <option value="S'mores & Chocolate">S'mores & Chocolate</option>
+                    <option value="Nutella Stuffed Bomb">Nutella Stuffed Bomb</option>
+                    <option value="Red Velvet Cream">Red Velvet Cream</option>
+                    <option value="Custom Flavor Request">Custom Flavor Request</option>
+                </select>
+
+                <label for="estimated-qty">Estimated Quantity (Boxes/Cookies):</label>
+                <input type="number" id="estimated-qty" min="1" required placeholder="e.g. 50 cookies">
+
+                <label for="enq-details">Special Requests or Instructions:</label>
+                <textarea id="enq-details" rows="5" placeholder="Specify packaging, dietary needs, or event specifics..."></textarea>
+
+                <button type="submit">SUBMIT ORDER ENQUIRY</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div id="enquiryModal" class="modal-overlay">
+        <div class="modal-box">
+            <h2>Confirm Order Enquiry</h2>
+            <p>Review your enquiry details below:</p>
+            <div id="enquiryPreview" class="modal-preview-text"></div>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Would you like to approve and exit to Gmail to complete your enquiry?</p>
+            <div class="modal-actions">
+                <button class="btn-modal-primary" onclick="proceedEnquiryGmail()">Yes, Open Gmail</button>
+                <button class="btn-modal-secondary" onclick="closeEnquiryModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-block">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+276622346">(+27)-662-2346</a></p>
+                <p>Email: <a href="mailto:info@crumbstudio.gmail.com">info@crumbstudio.gmail.com</a></p>
+            </div>
+            <div class="footer-block">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                    <a href="https://instagram.com" target="_blank">📷 Instagram</a>
+                </div>
+            </div>
+            <div class="footer-block">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                       <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-handle">
+            @CrumbStudio Bakery — Gqeberha
+        </div>
+    </footer>
+
+    <script>
+        let pendingEnquiryMailto = "";
+
+        function handleEnquirySubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('enq-name').value;
+            const email = document.getElementById('enq-email').value;
+            const phone = document.getElementById('enq-phone').value;
+            const date = document.getElementById('event-date').value;
+            const flavor = document.getElementById('cookie-flavor').value;
+            const qty = document.getElementById('estimated-qty').value;
+            const details = document.getElementById('enq-details').value;
+
+            const previewText = `Event Order Enquiry:\nName: ${name} (${email})\nPhone: ${phone}\nEvent Date: ${date}\nSelected Flavor: ${flavor}\nQuantity: ${qty}\n\nAdditional Notes:\n${details}`;
+            document.getElementById('enquiryPreview').innerText = previewText;
+
+            const subject = encodeURIComponent(`Order Enquiry from ${name} (${date})`);
+            const body = encodeURIComponent(previewText);
+            pendingEnquiryMailto = `mailto:info@crumbstudio.gmail.com?subject=${subject}&body=${body}`;
+
+            document.getElementById('enquiryModal').classList.add('active');
+        }
+
+        function proceedEnquiryGmail() {
+            window.location.href = pendingEnquiryMailto;
+            closeEnquiryModal();
+        }
+
+        function closeEnquiryModal() {
+            document.getElementById('enquiryModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

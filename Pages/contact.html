@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US | Crumb Studio</title>
+    <link rel="stylesheet" href="../Assets/style.css">
+    <link rel="icon" type="image/jpeg" href="../Assets/images/logo1.jpg">
+</head>
+<body class="home-page">
+    <header class="site-header">
+        <a href="../index.html" class="header-brand-title">CRUMB STUDIO</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="nav-menu">
+            <a href="../index.html" class="nav-link">HOME PAGE</a> |
+            <a href="about.html" class="nav-link">OUR STORY</a> |
+            <a href="contact.html" class="nav-link active">CONTACT</a> |
+            <a href="enquiry.html" class="nav-link">ENQUIRY</a> |
+            <a href="Gallery.html" class="nav-link">GALLERY</a> |
+            <a href="team.html" class="nav-link">OUR TEAM</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <section class="contact-form-section">
+            <h1>Contact Us</h1>
+            <p style="margin-bottom: 20px;">Have a question or feedback for Crumb Studio? Complete the form below and send us your message.</p>
+            
+            <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required placeholder="Enter your full name">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required placeholder="Enter your email address">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required placeholder="Enter your phone number">
+
+                <label for="message-type">Type of Message:</label>
+                <select id="message-type" required>
+                    <option value="General Feedback">General Feedback</option>
+                    <option value="Customer Support">Customer Support</option>
+                    <option value="Suggestion">Suggestion</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="message">Full Message:</label>
+                <textarea id="message" rows="6" required placeholder="Type your message here..."></textarea>
+
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <h1>Contact Details</h1>
+            <div class="contact-details" style="line-height: 1.8;">
+                <p>📍 Rosebank College, 3 Rink St, Central, Gqeberha (Port Elizabeth)</p>
+                <p>📞 Phone: (+27)-662-2346</p>
+                <p>✉️ Email: info@crumbstudio.gmail.com</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.0876773139885!2d25.608998375989348!3d-33.964585873190124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad33735a91eb3%3A0x795aef23248c11e1!2sRosebank%20College%20Port%20Elizabeth!5e0!3m2!1sen!2sza!4v1789569229043!5m2!1sen!2sza" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div id="messageModal" class="modal-overlay">
+        <div class="modal-box">
+            <h2>Confirm & Send Message</h2>
+            <p>Here is a preview of your message:</p>
+            <div id="modalPreview" class="modal-preview-text"></div>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Would you like to approve and exit this website to open Gmail?</p>
+            <div class="modal-actions">
+                <button class="btn-modal-primary" onclick="proceedToGmail()">Yes, Open Gmail</button>
+                <button class="btn-modal-secondary" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-block">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+276622346">(+27)-662-2346</a></p>
+                <p>Email: <a href="mailto:info@crumbstudio.gmail.com">info@crumbstudio.gmail.com</a></p>
+            </div>
+            <div class="footer-block">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                    <a href="https://instagram.com" target="_blank">📷 Instagram</a>
+                </div>
+            </div>
+            <div class="footer-block">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                       <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-handle">
+            @CrumbStudio Bakery — Gqeberha
+        </div>
+    </footer>
+
+    <script>
+        let pendingMailto = "";
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const type = document.getElementById('message-type').value;
+            const msg = document.getElementById('message').value;
+
+            const previewText = `From: ${name} (${email})\nPhone: ${phone}\nType: ${type}\n\nMessage:\n${msg}`;
+            document.getElementById('modalPreview').innerText = previewText;
+
+            const subject = encodeURIComponent(`Contact Form [${type}]: ${name}`);
+            const body = encodeURIComponent(previewText);
+            pendingMailto = `mailto:info@crumbstudio.gmail.com?subject=${subject}&body=${body}`;
+
+            document.getElementById('messageModal').classList.add('active');
+        }
+
+        function proceedToGmail() {
+            window.location.href = pendingMailto;
+            closeModal();
+        }
+
+        function closeModal() {
+            document.getElementById('messageModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

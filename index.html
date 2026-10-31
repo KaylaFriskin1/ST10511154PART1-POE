@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PART 1 | Website | HOME PAGE</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="icon" type="image/jpeg" href="./Assets/images/logo1.jpg">
+</head>
+<body class="home-page">
+    <header class="site-header">
+        <a href="index.html" class="header-brand-title">CRUMB STUDIO</a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">
+            <span></span><span></span><span></span>
+        </label>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">HOME PAGE</a> |
+            <a href="Pages/about.html" class="nav-link">OUR STORY</a> |
+            <a href="Pages/contact.html" class="nav-link">CONTACT</a> |
+            <a href="Pages/enquiry.html" class="nav-link">ENQUIRY</a> |
+            <a href="Pages/Gallery.html" class="nav-link">GALLERY</a> |
+            <a href="Pages/team.html" class="nav-link">OUR TEAM</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="logo-text"><h1>CRUMB STUDIO</h1></div>
+            <h2 class="hero-greeting">Hello there,</h2>
+            <p class="hero-text">
+                Indulge in the most delicious, fun, and extraordinary cookies in South Africa.<br>
+                Our ingredients are rare and unique, which makes us stand out from one another.<br>
+                The target audience is for every person who needs a good sweet and tasty treat!
+            </p>
+
+            <!-- Smart Universal Search Bar with Live Suggestions -->
+            <div class="search-wrapper">
+                <div class="hero-search-container">
+                    <input 
+                        type="text" 
+                        id="heroSearchInput" 
+                        placeholder="🔍 Search for cookies, 'contact', 'team', 'enquiry'..." 
+                        oninput="handleLiveSearch()" 
+                        onkeydown="if(event.key==='Enter') performSearch()"
+                        autocomplete="off"
+                    >
+                    <button type="button" class="btn-hero-search" onclick="performSearch()">Search</button>
+                </div>
+                <!-- Dropdown Search Options List -->
+                <div id="searchDropdown" class="search-dropdown"></div>
+            </div>
+
+            <div class="hero-image">
+                <img src="./Assets/images/picture1.jpg" alt="Crumb Studio Cookie Selection">
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-block">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+276622346">(+27)-662-2346</a></p>
+                <p>Email: <a href="mailto:info@crumbstudio.gmail.com">info@crumbstudio.gmail.com</a></p>
+            </div>
+            <div class="footer-block">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                    <a href="https://instagram.com" target="_blank">📷 Instagram</a>
+                </div>
+            </div>
+            <div class="footer-block">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="Pages/about.html">Our Story</a></li>
+                    <li><a href="Pages/contact.html">Contact Us</a></li>
+                    <li><a href="Pages/enquiry.html">Order Enquiry</a></li>
+                    <li><a href="Pages/Gallery.html">Cookie Gallery</a></li>
+                    <li><a href="Pages/team.html">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-handle">
+            @CrumbStudio Bakery — Gqeberha
+        </div>
+    </footer>
+
+    <script>
+        // List of searchable site options and cookies
+        const searchOptions = [
+            // Page Destinations
+            { name: "Contact Us (Get in touch / Details)", url: "Pages/contact.html", type: "Page" },
+            { name: "Our Team (Staff & Leadership)", url: "Pages/team.html", type: "Page" },
+            { name: "Our Story (About Crumb Studio)", url: "Pages/about.html", type: "Page" },
+            { name: "Order Enquiry (Custom & Catering)", url: "Pages/enquiry.html", type: "Page" },
+            { name: "Cookie Gallery (Browse All Treats)", url: "Pages/Gallery.html", type: "Page" },
+            
+            // Popular Cookie Items
+            { name: "S'mores & Chocolate Cookie", url: "Pages/Gallery.html?search=S'mores", type: "Cookie" },
+            { name: "Browned Butter Macadamia Cookie", url: "Pages/Gallery.html?search=Macadamia", type: "Cookie" },
+            { name: "Red Velvet Cream Cookie", url: "Pages/Gallery.html?search=Red%20Velvet", type: "Cookie" },
+            { name: "Pistachio Dark Chocolate Cookie", url: "Pages/Gallery.html?search=Pistachio", type: "Cookie" },
+            { name: "Biscoff Lotus Fudge Cookie", url: "Pages/Gallery.html?search=Biscoff", type: "Cookie" },
+            { name: "Nutella Stuffed Bomb Cookie", url: "Pages/Gallery.html?search=Nutella", type: "Cookie" },
+            { name: "Macaron Special", url: "Pages/Gallery.html?search=Macaron", type: "Cookie" },
+            { name: "Pig Cookies", url: "Pages/Gallery.html?search=Pig", type: "Cookie" }
+        ];
+
+        function handleLiveSearch() {
+            const query = document.getElementById('heroSearchInput').value.trim().toLowerCase();
+            const dropdown = document.getElementById('searchDropdown');
+            dropdown.innerHTML = "";
+
+            if (query.length === 0) {
+                dropdown.style.display = "none";
+                return;
+            }
+
+            // Filter options matching the search input
+            const matches = searchOptions.filter(item => 
+                item.name.toLowerCase().includes(query)
+            );
+
+            if (matches.length > 0) {
+                matches.forEach(item => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'dropdown-item';
+                    optionDiv.innerHTML = `<span>${item.name}</span> <small class="item-tag">${item.type}</small>`;
+                    optionDiv.onclick = () => {
+                        window.location.href = item.url;
+                    };
+                    dropdown.appendChild(optionDiv);
+                });
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+
+        function performSearch() {
+            const query = document.getElementById('heroSearchInput').value.trim().toLowerCase();
+            if (!query) return;
+
+            // Direct page shortcuts
+            if (query.includes('contact')) {
+                window.location.href = "Pages/contact.html";
+            } else if (query.includes('team')) {
+                window.location.href = "Pages/team.html";
+            } else if (query.includes('story') || query.includes('about')) {
+                window.location.href = "Pages/about.html";
+            } else if (query.includes('enquiry') || query.includes('order')) {
+                window.location.href = "Pages/enquiry.html";
+            } else {
+                window.location.href = "Pages/Gallery.html?search=" + encodeURIComponent(query);
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-wrapper')) {
+                document.getElementById('searchDropdown').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

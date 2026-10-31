@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1 | Website | Gallery</title>
+    <link rel="stylesheet" href="../Assets/style.css">
+    <link rel="icon" type="image/jpeg" href="../Assets/images/logo1.jpg">
+</head>
+<body class="home-page">
+    <header class="site-header">
+        <a href="../index.html" class="header-brand-title">CRUMB STUDIO</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="nav-menu">
+            <a href="../index.html" class="nav-link">HOME PAGE</a> |
+            <a href="about.html" class="nav-link">OUR STORY</a> |
+            <a href="contact.html" class="nav-link">CONTACT</a> |
+            <a href="enquiry.html" class="nav-link">ENQUIRY</a> |
+            <a href="Gallery.html" class="nav-link active">GALLERY</a> |
+            <a href="team.html" class="nav-link">OUR TEAM</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h3 style="font-size: 1.8rem; text-align: center; color: #654321;">Check Out Our Cookie Gallery</h3>
+        
+        <!-- Live Search Bar -->
+        <div class="gallery-search-container">
+            <input type="text" id="searchInput" class="gallery-search-input" placeholder="🔍 Search cookies by name..." onkeyup="filterCookies()">
+        </div>
+
+        <hr class="divider">
+
+        <section>
+            <!-- 2-Column Grid with Your 20 Cookies -->
+            <div class="menu-grid" id="cookieGrid">
+
+                <!-- Cookie 1 -->
+                <div class="menu-card" data-name="Macaron">
+                    <div class="gallery-img-wrap" onclick="openLightbox(0)">
+                        <img src="../Assets/images/2.jpg" alt="Macaron">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Macaron</h3>
+                    <p class="price">R 35.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Macaron', 35)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 2 -->
+                <div class="menu-card" data-name="Pig cookies">
+                    <div class="gallery-img-wrap" onclick="openLightbox(1)">
+                        <img src="../Assets/images/3.jpg" alt="Pig cookies">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Pig cookies</h3>
+                    <p class="price">R 38.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Pig cookies', 38)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 3 -->
+                <div class="menu-card" data-name="M&M cookies">
+                    <div class="gallery-img-wrap" onclick="openLightbox(2)">
+                        <img src="../Assets/images/4.jpg" alt="M&M cookies">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>M&M cookies</h3>
+                    <p class="price">R 36.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('M&M cookies', 36)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 4 -->
+                <div class="menu-card" data-name="Hershey cookies">
+                    <div class="gallery-img-wrap" onclick="openLightbox(3)">
+                        <img src="../Assets/images/5.jpg" alt="Hershey cookies">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Hershey cookies</h3>
+                    <p class="price">R 40.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Hershey cookies', 40)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 5 -->
+                <div class="menu-card" data-name="Lemon surprise">
+                    <div class="gallery-img-wrap" onclick="openLightbox(4)">
+                        <img src="../Assets/images/6.jpg" alt="Lemon surprise">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Lemon surprise</h3>
+                    <p class="price">R 30.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Lemon surprise', 30)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 6 -->
+                <div class="menu-card" data-name="Biscoff">
+                    <div class="gallery-img-wrap" onclick="openLightbox(5)">
+                        <img src="../Assets/images/7.jpg" alt="Biscoff">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Biscoff</h3>
+                    <p class="price">R 37.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Biscoff', 37)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 7 -->
+                <div class="menu-card" data-name="Heart cookies">
+                    <div class="gallery-img-wrap" onclick="openLightbox(6)">
+                        <img src="../Assets/images/8.jpg" alt="Heart cookies">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Heart cookies</h3>
+                    <p class="price">R 34.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Heart cookies', 34)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 8 -->
+                <div class="menu-card" data-name="Pistachio chip">
+                    <div class="gallery-img-wrap" onclick="openLightbox(7)">
+                        <img src="../Assets/images/9.jpg" alt="Pistachio chip">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Pistachio chip</h3>
+                    <p class="price">R 39.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Pistachio chip', 39)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 9 -->
+                <div class="menu-card" data-name="Cream full">
+                    <div class="gallery-img-wrap" onclick="openLightbox(8)">
+                        <img src="../Assets/images/10.jpg" alt="Cream full">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Cream full</h3>
+                    <p class="price">R 35.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Cream full', 35)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 10 -->
+                <div class="menu-card" data-name="Mint choc">
+                    <div class="gallery-img-wrap" onclick="openLightbox(9)">
+                        <img src="../Assets/images/11.jpg" alt="Mint choc">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Mint choc</h3>
+                    <p class="price">R 36.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Mint choc', 36)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 11 -->
+                <div class="menu-card" data-name="Cute flower">
+                    <div class="gallery-img-wrap" onclick="openLightbox(10)">
+                        <img src="../Assets/images/12.jpg" alt="Cute flower">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Cute flower</h3>
+                    <p class="price">R 33.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Cute flower', 33)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 12 -->
+                <div class="menu-card" data-name="Fun cookies">
+                    <div class="gallery-img-wrap" onclick="openLightbox(11)">
+                        <img src="../Assets/images/13.jpg" alt="Fun cookies">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Fun cookies</h3>
+                    <p class="price">R 32.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Fun cookies', 32)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 13 -->
+                <div class="menu-card" data-name="Fat cookies">
+                    <div class="gallery-img-wrap" onclick="openLightbox(12)">
+                        <img src="../Assets/images/14.jpg" alt="Fat cookies">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Fat cookies</h3>
+                    <p class="price">R 42.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Fat cookies', 42)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 14 -->
+                <div class="menu-card" data-name="Ice cream cookie">
+                    <div class="gallery-img-wrap" onclick="openLightbox(13)">
+                        <img src="../Assets/images/15.jpg" alt="Ice cream cookie">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Ice cream cookie</h3>
+                    <p class="price">R 38.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Ice cream cookie', 38)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 15 -->
+                <div class="menu-card" data-name="Choc chip ice-cream">
+                    <div class="gallery-img-wrap" onclick="openLightbox(14)">
+                        <img src="../Assets/images/16.jpg" alt="Choc chip ice-cream">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Choc chip ice-cream</h3>
+                    <p class="price">R 39.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Choc chip ice-cream', 39)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 16 -->
+                <div class="menu-card" data-name="Oreo Surprise">
+                    <div class="gallery-img-wrap" onclick="openLightbox(15)">
+                        <img src="../Assets/images/17.jpg" alt="Oreo Surprise">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Oreo Surprise</h3>
+                    <p class="price">R 37.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Oreo Surprise', 37)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 17 -->
+                <div class="menu-card" data-name="Oats">
+                    <div class="gallery-img-wrap" onclick="openLightbox(16)">
+                        <img src="../Assets/images/18.jpg" alt="Oats">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Oats</h3>
+                    <p class="price">R 28.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Oats', 28)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 18 -->
+                <div class="menu-card" data-name="Jam full">
+                    <div class="gallery-img-wrap" onclick="openLightbox(17)">
+                        <img src="../Assets/images/19.jpg" alt="Jam full">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Jam full</h3>
+                    <p class="price">R 34.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Jam full', 34)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 19 -->
+                <div class="menu-card" data-name="Pistachio white">
+                    <div class="gallery-img-wrap" onclick="openLightbox(18)">
+                        <img src="../Assets/images/20.jpg" alt="Pistachio white">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Pistachio white</h3>
+                    <p class="price">R 40.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Pistachio white', 40)">Add to Cart</button>
+                </div>
+
+                <!-- Cookie 20 -->
+                <div class="menu-card" data-name="Red cookies">
+                    <div class="gallery-img-wrap" onclick="openLightbox(19)">
+                        <img src="../Assets/images/21.jpg" alt="Red cookies">
+                        <span class="gallery-zoom-badge">🔍 Click to zoom</span>
+                    </div>
+                    <h3>Red cookies</h3>
+                    <p class="price">R 35.00</p>
+                    <button type="button" class="btn-order" onclick="startOrderFlow('Red cookies', 35)">Add to Cart</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- STEP 1: Quantity Selection Modal -->
+    <div id="qtyModal" class="modal-overlay">
+        <div class="modal-box">
+            <h2>Add to Cart</h2>
+            <h3 id="modalItemTitle" style="color: var(--accent-color); margin-bottom: 15px;"></h3>
+            <p style="font-size: 1.05rem; font-weight: bold; margin-bottom: 15px;">How many would you like to add?</p>
+            
+            <div class="quantity-control" style="margin-bottom: 20px;">
+                <label for="modalQtyInput">Quantity:</label>
+                <input type="number" id="modalQtyInput" value="1" min="1" oninput="updateModalTotal()">
+            </div>
+            
+            <p style="font-size: 1.1rem; font-weight: bold; color: var(--primary-color);">Total: R <span id="modalCalcTotal">0.00</span></p>
+
+            <div class="modal-actions" style="margin-top: 20px;">
+                <button type="button" class="btn-modal-primary" onclick="goToConfirmationStep()">Next</button>
+                <button type="button" class="btn-modal-secondary" onclick="closeQtyModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP 2: Submission Confirmation Modal -->
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal-box">
+            <h2>Order Submitted!</h2>
+            <div style="background: #fdfaf6; padding: 15px; border-radius: 8px; border: 1px solid #e8dec8; margin: 15px 0;">
+                <p style="font-size: 1.05rem; font-weight: bold; color: var(--primary-color); line-height: 1.6; margin: 0;">
+                    Your order has been submitted. Go to the nearest store and please show them your message and pay in front of the counter. Thank you for supporting our business.
+                </p>
+            </div>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Order Details: <span id="confirmSummaryText"></span></p>
+            <div class="modal-actions">
+                <button type="button" class="btn-modal-primary" onclick="proceedToGmailFlow()">Proceed to Open Gmail</button>
+                <button type="button" class="btn-modal-secondary" onclick="closeConfirmModal()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+        <img id="lightboxImg" class="lightbox-content" src="" alt="Zoomed view">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+        <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-block">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+276622346">(+27)-662-2346</a></p>
+                <p>Email: <a href="mailto:info@crumbstudio.gmail.com">info@crumbstudio.gmail.com</a></p>
+            </div>
+            <div class="footer-block">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                    <a href="https://instagram.com" target="_blank">📷 Instagram</a>
+                </div>
+            </div>
+            <div class="footer-block">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home Page</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="enquiry.html">Order Enquiry</a></li>
+                    <li><a href="Gallery.html">Cookie Gallery</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-handle">
+            @CrumbStudio Bakery — Gqeberha
+        </div>
+    </footer>
+
+    <script>
+        const galleryItems = [
+            { src: "../Assets/images/2.jpg", title: "Macaron" },
+            { src: "../Assets/images/3.jpg", title: "Pig cookies" },
+            { src: "../Assets/images/4.jpg", title: "M&M cookies" },
+            { src: "../Assets/images/5.jpg", title: "Hershey cookies" },
+            { src: "../Assets/images/6.jpg", title: "Lemon surprise" },
+            { src: "../Assets/images/7.jpg", title: "Biscoff" },
+            { src: "../Assets/images/8.jpg", title: "Heart cookies" },
+            { src: "../Assets/images/9.jpg", title: "Pistachio chip" },
+            { src: "../Assets/images/10.jpg", title: "Cream full" },
+            { src: "../Assets/images/11.jpg", title: "Mint choc" },
+            { src: "../Assets/images/12.jpg", title: "Cute flower" },
+            { src: "../Assets/images/13.jpg", title: "Fun cookies" },
+            { src: "../Assets/images/14.jpg", title: "Fat cookies" },
+            { src: "../Assets/images/15.jpg", title: "Ice cream cookie" },
+            { src: "../Assets/images/16.jpg", title: "Choc chip ice-cream" },
+            { src: "../Assets/images/17.jpg", title: "Oreo Surprise" },
+            { src: "../Assets/images/18.jpg", title: "Oats" },
+            { src: "../Assets/images/19.jpg", title: "Jam full" },
+            { src: "../Assets/images/20.jpg", title: "Pistachio white" },
+            { src: "../Assets/images/21.jpg", title: "Red cookies" }
+        ];
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById('lightboxImg').src = galleryItems[index].src;
+            document.getElementById('lightboxCaption').innerText = galleryItems[index].title;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + galleryItems.length) % galleryItems.length;
+            document.getElementById('lightboxImg').src = galleryItems[currentIndex].src;
+            document.getElementById('lightboxCaption').innerText = galleryItems[currentIndex].title;
+        }
+
+        function filterCookies() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.menu-card');
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name').toLowerCase();
+                card.style.display = name.includes(query) ? 'flex' : 'none';
+            });
+        }
+
+        let currentItem = { name: '', price: 0, qty: 1, total: 0 };
+        let finalMailto = "";
+
+        function startOrderFlow(cookieName, unitPrice) {
+            currentItem = { name: cookieName, price: unitPrice, qty: 1, total: unitPrice };
+            document.getElementById('modalItemTitle').innerText = cookieName;
+            document.getElementById('modalQtyInput').value = 1;
+            updateModalTotal();
+            document.getElementById('qtyModal').classList.add('active');
+        }
+
+        function updateModalTotal() {
+            const qtyVal = parseInt(document.getElementById('modalQtyInput').value) || 1;
+            currentItem.qty = qtyVal < 1 ? 1 : qtyVal;
+            currentItem.total = (currentItem.price * currentItem.qty).toFixed(2);
+            document.getElementById('modalCalcTotal').innerText = currentItem.total;
+        }
+
+        function closeQtyModal() {
+            document.getElementById('qtyModal').classList.remove('active');
+        }
+
+        function goToConfirmationStep() {
+            closeQtyModal();
+            const summaryStr = `${currentItem.qty} x ${currentItem.name} (R ${currentItem.total})`;
+            document.getElementById('confirmSummaryText').innerText = summaryStr;
+
+            const subject = encodeURIComponent(`Cookie Order: ${currentItem.qty}x ${currentItem.name}`);
+            const body = encodeURIComponent(`Order Details:\nItem: ${currentItem.name}\nQuantity: ${currentItem.qty}\nTotal Amount: R ${currentItem.total}\n\nYour order has been submitted. Go to the nearest store and please show them your message and pay in front of the counter. Thank you for supporting our business.`);
+            
+            finalMailto = `mailto:info@crumbstudio.gmail.com?subject=${subject}&body=${body}`;
+            document.getElementById('confirmModal').classList.add('active');
+        }
+
+        function closeConfirmModal() {
+            document.getElementById('confirmModal').classList.remove('active');
+        }
+
+        function proceedToGmailFlow() {
+            if (finalMailto) {
+                window.location.href = finalMailto;
+            }
+            closeConfirmModal();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('search');
+            if (searchQuery) {
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) {
+                    searchInput.value = searchQuery;
+                    filterCookies();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

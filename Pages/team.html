@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR TEAM | Crumb Studio</title>
+    <link rel="stylesheet" href="../Assets/style.css">
+    <link rel="icon" type="image/jpeg" href="../Assets/images/logo1.jpg">
+</head>
+<body class="home-page">
+    <header class="site-header">
+        <a href="../index.html" class="header-brand-title">CRUMB STUDIO</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="nav-menu">
+            <a href="../index.html" class="nav-link">HOME PAGE</a> |
+            <a href="about.html" class="nav-link">OUR STORY</a> |
+            <a href="contact.html" class="nav-link">CONTACT</a> |
+            <a href="enquiry.html" class="nav-link">ENQUIRY</a> |
+            <a href="Gallery.html" class="nav-link">GALLERY</a> |
+            <a href="team.html" class="nav-link active">OUR TEAM</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h1 class="logo-text">OUR TEAM</h1>
+            <p class="hero-greeting">Click or tap any team card to flip!</p>
+
+            <div class="team-grid">
+                <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../Assets/images/Team2.jpg" alt="Mabne Mabn">
+                            <h3>Mabne Mabn</h3>
+                            <p style="color: #8b5a2b; font-weight: bold;">Founder & CEO</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Mabne Mabn</h3>
+                            <p>Founded Crumb Studio in 2018 in his family kitchen. Today he leads over 20 bakery branches across South Africa with a passion for handcrafted recipes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../Assets/images/Team1.jpg" alt="Sara Jerkins">
+                            <h3>Sara Jerkins</h3>
+                            <p style="color: #8b5a2b; font-weight: bold;">Head Pastry Chef</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Sara Jerkins</h3>
+                            <p>Formulates signature gourmet doughs and unique seasonal flavor pairings for all Crumb Studio branches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-block">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+276622346">(+27)-662-2346</a></p>
+                <p>Email: <a href="mailto:info@crumbstudio.gmail.com">info@crumbstudio.gmail.com</a></p>
+            </div>
+            <div class="footer-block">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                    <a href="https://instagram.com" target="_blank">📷 Instagram</a>
+                </div>
+            </div>
+            <div class="footer-block">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-handle">
+            @CrumbStudio Bakery — Gqeberha
+        </div>
+    </footer>
+</body>
+</html>
