@@ -197,19 +197,8 @@ The application allows users to seamlessly navigate between specialized sections
 
 ### Prerequisites
 - Any modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari).
-- Visual Studio Code (recommended) with the Live Server extension.
+- Visual Studio Code with the Live Server extension.
 
-### Step-by-Step Setup
-1. Clone the project repository from GitHub:
-   git clone https://github.com/your-username/crumb-studio-bakery.git
-
-2. Change directory into the repository folder:
-   cd crumb-studio-bakery
-
-3. Open the project in your code editor or double-click index.html to open it in your browser.
-4. If using VS Code Live Server, right-click index.html and select Open with Live Server to serve the site locally at http://127.0.0.1:5500/index.html.
-
----
 
 ## 8. COMPREHENSIVE CHANGELOG AND PROJECT HISTORY
 
