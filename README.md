@@ -9,7 +9,7 @@ Location: Gqeberha, South Africa
 
 # CRUMB STUDIO BAKERY - My Website
 PART 1 WEBDEVELOPMENT ASSIGNMENT
-## This is my final GitHub submission for Part 1
+## Part 1
 - I updated my proposal
 - I added my 5 html pages
 -  I have a navigation panel
@@ -53,15 +53,7 @@ For part 2, I focused on improving my website by adding css.styles inside my Ass
 
 ---
 
-## File Structure
-
-```text
-├── index.html
-├── assets/
-│   └── images/
-└── css/
-    ├── style.css
-    └── variables.css
+## Colors
 ```
 * Color scheme: Primary Color (--primary-color): #5c3a21 
 
