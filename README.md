@@ -1,4 +1,4 @@
-# CRUMB STUDIO BAKERY - My Website
+
 
 Module Code: WEDES020  
 Qualification: Diploma in Information Technology in Software Development  
@@ -7,7 +7,7 @@ Location: Gqeberha, South Africa
 
 ---
 
-
+# CRUMB STUDIO BAKERY - My Website
 ## 1.SUMMARY
 
 Crumb Studio Bakery is an interactive, fully responsive multi-page web platform engineered for a boutique bakery located in Gqeberha, South Africa. Designed to satisfy all technical and structural guidelines of the WEDES020 Web Development module, this project delivers an engaging, accessible, and feature-rich digital storefront.
