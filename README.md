@@ -54,7 +54,7 @@ For part 2, I focused on improving my website by adding css.styles inside my Ass
 ---
 
 ## Colors
-```
+
 * Color scheme: Primary Color (--primary-color): #5c3a21 
 
 Warm Chocolate Brown — used for the main header bar, logo text title, primary buttons, and footer background. 
@@ -90,6 +90,9 @@ Applied globally to body.home-page for clear line spacing and easy readability.
 ## Update for an Ice task 4
 - Added a form on my contact page
 - Formatted my contact page again using style.css
+---
+
+# Part 3
 ## 1.SUMMARY
 
 Crumb Studio Bakery is an interactive, fully responsive multi-page web platform engineered for a boutique bakery located in Gqeberha, South Africa. Designed to satisfy all technical and structural guidelines of the WEDES020 Web Development module, this project delivers an engaging, accessible, and feature-rich digital storefront.
@@ -112,8 +115,6 @@ The application allows users to seamlessly navigate between specialized sections
 - Accessibility and SEO Standards: Incorporate structured meta tags, semantic content hierarchy, and descriptive alternative text for all media elements.
 
 ---
-
-
 
 ## 3. CORE FEATURES AND TECHNICAL IMPLEMENTATION
 
@@ -281,9 +282,7 @@ Evaluation Metric - Implementation Detail - Status
 
 ## 16. FOOTER SECTION & QUICK LINKS
 - 3-Block Footer Layout: Features organized columns for Contact Info (Phone/Email), Social Media links (Facebook/Instagram), and a full Quick Links list for instant 1-click navigation to any page.
--
-# REFERENCES 
----
+
 
 ## References
 
@@ -298,4 +297,4 @@ Evaluation Metric - Implementation Detail - Status
 5. Google Maps Platform. (2024). Embed API & Maps Integration Standards. Google Developers Documentation. Available at: https://developers.google.com/maps/documentation/embed
 
 6. Visual Studio Code & Live Server Documentation. (2024). Local Development & Static Web Server Setup Guide. Available at: https://code.visualstudio.com/docs
-7.
+
